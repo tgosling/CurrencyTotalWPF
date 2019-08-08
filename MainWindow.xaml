@@ -6,14 +6,13 @@
         xmlns:local="clr-namespace:CurrencyCounter"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Currency Counter" Height="450" Width="370">
-    <Grid>
+        Title="Currency Counter" Height="350" Width="370">
+    <Grid Background="LightSlateGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="200"/>
             <RowDefinition/>
-            <RowDefinition/>
-    </Grid.RowDefinitions>
-        <WrapPanel Background="LightSlateGray">
+        </Grid.RowDefinitions>
+        <WrapPanel>
             <Border  Background="AliceBlue" CornerRadius="6" Margin="15,10,0,0"
                  BorderBrush="SteelBlue" BorderThickness="2" Height="185" HorizontalAlignment="Left">
                 <StackPanel Width="150" HorizontalAlignment="Left">
@@ -51,5 +50,15 @@
                 </StackPanel>
             </Border>
         </WrapPanel>
+        <WrapPanel Grid.Row="1" Width="175" HorizontalAlignment="Center">
+            <Button Content="Total Coins" Height="25" Width="75"/>
+            <TextBox IsReadOnly="True" Width="80" Margin="10,0,0,0"/>
+            <Button Content="Total Bills" Height="25" Width="75" Margin="0,5,0,0"/>
+            <TextBox IsReadOnly="True" Width="80" Margin="10,5,0,0"/>
+            <Button Content="Total" Height="25" Width="75" Margin="0,5,0,0"/>
+            <TextBox IsReadOnly="True" Width="80" Margin="10,5,0,0"/>
+        </WrapPanel>
+        <Button Content="Report" FontSize="14" Grid.Row="1" HorizontalAlignment="Left" 
+                VerticalAlignment="Bottom" Margin="10,0,0,10"  Width="60" Height="30" Background="LimeGreen"></Button>
     </Grid>
 </Window>
