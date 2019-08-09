@@ -156,11 +156,14 @@
   <data name="totalBtn" xml:space="preserve">
     <value>Total</value>
   </data>
-  <data name="totBillsBtn" xml:space="preserve">
-    <value>Total Bills</value>
+  <data name="totBillsLbl" xml:space="preserve">
+    <value>Total Bills:</value>
   </data>
-  <data name="totCoinsBtn" xml:space="preserve">
-    <value>Total Coins</value>
+  <data name="totCoinsLbl" xml:space="preserve">
+    <value>Total Coins:</value>
+  </data>
+  <data name="totCurrLbl" xml:space="preserve">
+    <value>Total Currency:</value>
   </data>
   <data name="twenLbl" xml:space="preserve">
     <value>Twenties:</value>
