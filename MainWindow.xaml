@@ -20,15 +20,15 @@
                     <Label Content="{x:Static prop:Resources.coinsLbl}"></Label>
                     <WrapPanel>
                         <Label Content="{x:Static prop:Resources.nickelsLBL}" Width="60"></Label>
-                        <TextBox Width="80"></TextBox>
+                        <TextBox Width="80" x:Name="nickelsTB" Text="0"></TextBox>
                         <Label Content="{x:Static prop:Resources.dimesLbl}" Width="60" Margin="0,5,0,0"></Label>
-                        <TextBox Width="80" Margin="0,5,0,0"></TextBox>
+                        <TextBox Width="80" Margin="0,5,0,0" x:Name="dimesTB" Text="0"></TextBox>
                         <Label Content="{x:Static prop:Resources.qrtrsLbl}" Width="60" Margin="0,5,0,0"></Label>
-                        <TextBox Width="80" Margin="0,5,0,0"></TextBox>
+                        <TextBox Width="80" Margin="0,5,0,0" x:Name="qrtsTB" Text="0"></TextBox>
                         <Label Content="{x:Static prop:Resources.loonLbl}" Width="60" Margin="0,5,0,0"></Label>
-                        <TextBox Width="80" Margin="0,5,0,0"></TextBox>
+                        <TextBox Width="80" Margin="0,5,0,0" x:Name="loonsTB" Text="0"></TextBox>
                         <Label Content="{x:Static prop:Resources.toonLbl}" Width="60" Margin="0,5,0,0"></Label>
-                        <TextBox Width="80" Margin="0,6,0,0"></TextBox>
+                        <TextBox Width="80" Margin="0,6,0,0" x:Name="toonsTB" Text="0"></TextBox>
                     </WrapPanel>
                 </StackPanel>
             </Border>
@@ -38,26 +38,29 @@
                     <Label Content="{x:Static prop:Resources.billsLbl}"></Label>
                     <WrapPanel>
                         <Label Content="{x:Static prop:Resources.fiveLbl}" Width="65"></Label>
-                        <TextBox Width="80"></TextBox>
+                        <TextBox Width="80" x:Name="fivesTB" Text="0"></TextBox>
                         <Label Content="{x:Static prop:Resources.tensLbl}" Width="65" Margin="0,5,0,0"></Label>
-                        <TextBox Width="80" Margin="0,5,0,0"></TextBox>
+                        <TextBox Width="80" Margin="0,5,0,0" x:Name="tensTB" Text="0"></TextBox>
                         <Label Content="{x:Static prop:Resources.twenLbl}" Width="65" Margin="0,5,0,0"></Label>
-                        <TextBox Width="80" Margin="0,5,0,0"></TextBox>
+                        <TextBox Width="80" Margin="0,5,0,0" x:Name="twntyTB" Text="0"></TextBox>
                         <Label Content="{x:Static prop:Resources.fiftLbl}" Width="65" Margin="0,5,0,0"></Label>
-                        <TextBox Width="80" Margin="0,5,0,0"></TextBox>
+                        <TextBox Width="80" Margin="0,5,0,0" x:Name="fiftyTB" Text="0"></TextBox>
                         <Label Content="{x:Static prop:Resources.hundLbl}" Width="65" Margin="0,5,0,0"></Label>
-                        <TextBox Width="80" Margin="0,6,0,0"></TextBox>
+                        <TextBox Width="80" Margin="0,6,0,0" x:Name="hundTB" Text="0"></TextBox>
                     </WrapPanel>
                 </StackPanel>
             </Border>
         </WrapPanel>
         <WrapPanel Grid.Row="1" Width="175" HorizontalAlignment="Center" Margin="0,10,0,0">
-            <Button Content="{x:Static prop:Resources.totCoinsBtn}" Height="25" Width="75"/>
-            <TextBox IsReadOnly="True" Width="80" Margin="10,0,0,0"/>
-            <Button Content="{x:Static prop:Resources.totBillsBtn}" Height="25" Width="75" Margin="0,5,0,0"/>
-            <TextBox IsReadOnly="True" Width="80" Margin="10,5,0,0"/>
-            <Button Content="{x:Static prop:Resources.totalBtn}" Height="25" Width="75" Margin="0,5,0,0"/>
-            <TextBox IsReadOnly="True" Width="80" Margin="10,5,0,0"/>
+            <Button Content="{x:Static prop:Resources.totCoinsBtn}" Height="25" Width="75" 
+                    x:Name="totCoinsBTN" Click="TotalCoins_Click"/>
+            <TextBox IsReadOnly="True" Width="80" Margin="10,0,0,0" x:Name="totCoinsTB"/>
+            <Button Content="{x:Static prop:Resources.totBillsBtn}"   Height="25" Width="75" Margin="0,5,0,0" 
+                    x:Name="totBillsBTN" Click="TotalBills_Click"/>
+            <TextBox IsReadOnly="True" Width="80" Margin="10,5,0,0"  x:Name="totBillsTB" />
+            <Button Content="{x:Static prop:Resources.totalBtn}" Height="25" Width="75" Margin="0,5,0,0" 
+                    x:Name="totCurrBTN" />
+            <TextBox IsReadOnly="True" Width="80" Margin="10,5,0,0" x:Name="totalCurrTB"/>
         </WrapPanel>
         <Button Content="{x:Static prop:Resources.reportBtn}" FontSize="14" Grid.Row="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" Margin="10,0,0,10"  Width="60" Height="30" Background="LimeGreen"></Button>
